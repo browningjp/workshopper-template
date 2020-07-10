@@ -9,6 +9,9 @@ vars:
   OPENSHIFT_MASTER_URL: "http://192.168.1.100:8443"
   OPENSHIFT_USERNAME: "developer"
   OPENSHIFT_PASSWORD: "password"
+  DYNAMIC_USER_NAME: true
+  USER_NAME: "user%2d"
+  
   JAVA_APP: true
   
 modules:
