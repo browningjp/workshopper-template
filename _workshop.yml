@@ -1,0 +1,11 @@
+id: devex
+name: OpenShift Developer Experience
+
+vars:
+  OPENSHIFT_CONSOLE_URL: "https://console-openshift-console.mycluster.com"
+
+modules:
+  activate:
+  - intro
+  - prereq
+  - introductiontooc
