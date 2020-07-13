@@ -2,13 +2,14 @@ id: "workshop1"
 name: "OpenShift Workshop"
 
 content:
-  url: https://raw.githubusercontent.com/siamaksade/workshopper-template/master
+  url: https://raw.githubusercontent.com/browningjp/workshopper-template/master
 
 vars:
   OPENSHIFT_DOCS_BASE: "https://docs.openshift.com/container-platform/3.7"
   OPENSHIFT_MASTER_URL: "http://192.168.1.100:8443"
   OPENSHIFT_USERNAME: "developer"
-  OPENSHIFT_PASSWORD: "password"
+  OPENSHIFT_PASSWORD: "newpass"
+  DYNAMIC_USER_NAME: true
   JAVA_APP: true
   
 modules:

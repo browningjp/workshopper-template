@@ -8,7 +8,7 @@ $ oc login {{OPENSHIFT_MASTER_URL}}
 
 Enter the username and password provided to you by the instructor:
 
-* Username: {{OPENSHIFT_USERNAME}}
+* Username: {{USER_ID}}
 * Password: {{OPENSHIFT_PASSWORD}}
 
 ![OpenShift Login]({% image_path ocp-login.png %}){:width="900px"}
