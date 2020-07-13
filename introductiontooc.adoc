@@ -32,7 +32,7 @@ oc whoami
 oc version
 ----
 
-image::images/ocintro1.png[Correct response from oc]
+image::ocintro1.png[Correct response from oc]
 
 The oc client works using something called a 'context'. This is a valid login to a target OpenShift system. If the commands do not return the successful output (see above for a similar output) then please repeat the login steps listed in the pre-requisites.
 
@@ -43,7 +43,7 @@ What we are going to do is create a Project to work in. This is equivalent, but 
 oc new-project octest_{{USER_ID}}
 ----
 
-image::images/ocintro2.png[Correct response from oc new-project]
+image::ocintro2.png[Correct response from oc new-project]
 
 What we have done is create a context within our user's object space on the OpenShift Cluster. As creators we have admin access and rights to this space - we can create and delete objects, that we have the rights to create, as much as we like here.
 
