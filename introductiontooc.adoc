@@ -143,7 +143,7 @@ oc new-app https://github.com/utherp0/nodenews
 
 Again use the 'oc get pods' and 'oc status' to watch the build of the second application. When it completes it will look like this:
 
-image::images/ocintro8.png[working pods for app2]
+image::ocintro8.png[working pods for app2]
 
 === Using oc to manipulate existing objects
 
