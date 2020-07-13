@@ -55,7 +55,7 @@ oc projects
 oc get projects
 ----
 
-image::images/ocintro3.png[Correct response from projects commands]
+image::ocintro3.png[Correct response from projects commands]
 
 The 'oc projects' is an opinionated command - because we work with Projects so much there is a shortcut for them. The second command is the standard way of getting any object that you have the rights to via the oc command.
 
@@ -80,7 +80,7 @@ This command will show an explanation of that API object type, namely 'Pods'. No
 oc explain pods --recursive
 ----
 
-image::images/ocintro4.png[Full definition of Pod]
+image::ocintro4.png[Full definition of Pod]
 
 Every object can be described using JSON or YAML - this command returns, from the Server, the exact definition of that object. This is incredibly useful when we get to editing the objects via oc.
 
@@ -106,7 +106,7 @@ oc new-app https://github.com/utherp0/meow2
 
 The oc command will cause OpenShift to create all the contents it needs for an Application based on the source code it finds at the GitHub repo. In this case the source code contains the building blocks for a node.js application. The image belows shows the output you should receive:
 
-image:images/ocintro5.png[Result of new-app]
+image:ocintro5.png[Result of new-app]
 
 *Note the Resources Created part of the output - from a single command to create an App it has created the core required components.*
 
@@ -117,7 +117,7 @@ Now type the follow, as suggested by the output:
 oc status
 ----
 
-image::images/ocintro6.png[oc status output]
+image::ocintro6.png[oc status output]
 
 The system is performing a build, defined by the buildconfig that has been created using the chosen technology deduced by OpenShift from the repo. When the build finishes it will deploy the application - the deployment is shown as the 'dc', which is the deployment config object. This is waiting on the image to be created by the build. It also creates a Service, which is the internal endpoint for the application.
 
@@ -130,7 +130,7 @@ oc get pods
 
 Once deployed the output should look like this:
 
-image::images/ocintro7.png[working pods]
+image::ocintro7.png[working pods]
 
 You will notice there are three Pods - two have completed and one is running. This is because those actions of building an Application into an Image and then deploying the Application are executed as Pods themselves.
 
@@ -169,7 +169,7 @@ Once the commands come back successfully type:
 oc get pods | grep Running
 ----
 
-image::images/ocintro9.png[all the pods for the two apps]
+image::ocintro9.png[all the pods for the two apps]
 
 We are now going to look at the composition of a single 'object', in this case a pod. Using the output of the command above, pick one of the three Running meow2 Pods. You will need the name, which will be meow2-1-xxxxx, where xxxxx are random characters. Using the five characters from your chosen Pod type the following:
 
@@ -215,7 +215,7 @@ echo "  "$(oc get pod $pod -o jsonpath='{.status.phase}'); \
 done
 ----
 
-image::images/ocintro10.png[manual pod listing]
+image::ocintro10.png[manual pod listing]
 
 What we will do now is to scale down *all* of the applications to a single Pod using the oc command - this may seem a little pithy but imagine if you had operations to run over hundreds or thousands of objects. This approach makes it very easy to automate tasks. Type the following:
 
