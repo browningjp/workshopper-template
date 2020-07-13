@@ -1,5 +1,8 @@
-id: devex
-name: OpenShift Developer Experience
+id: "devex"
+name: "OpenShift Developer Experience"
+
+content:
+  url: https://raw.githubusercontent.com/browningjp/workshopper-template/master
 
 vars:
   OPENSHIFT_CONSOLE_URL: "https://console-openshift-console.mycluster.com"
