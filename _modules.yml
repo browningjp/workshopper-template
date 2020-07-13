@@ -1,5 +1,5 @@
 config:
-    renderer: asciidoc
+  renderer: asciidoc
 
 modules:
   intro:
@@ -8,37 +8,3 @@ modules:
     name: Workshop Prerequisites
   introductiontooc:
     name: Introduction to oc
-  applicationbasics:
-    name: Application Basics
-  deployments:
-    name: Deployments
-  applicationdeploymentstrategies:
-    name: Application Deployment Strategies
-  sdn:
-    name: Software-Defined Networking
-  rbac:
-    name: Role-Based Access Control
-  pvs:
-    name: Persistent Volumes
-  healthprobes:
-    name: Health Probes
-  metrics:
-    name: Metrics
-  serverlessserving:
-    name: OpenShift Serverless Serving
-  camelk:
-    name: Camel K
-  camelkocpserverlesseventing:
-    name: Camel K Serverless Eventing
-  camelkocpserverlessservice:
-    name: Camel K Serverless Serving
-  odo:
-    name: odo
-  tekton:
-    name: Tekton Pipelines
-  servicemesh:
-    name: Service Mesh
-  quay:
-    name: Quay
-  quarkus:
-    name: Quarkus
