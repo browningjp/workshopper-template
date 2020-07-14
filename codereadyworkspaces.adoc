@@ -58,7 +58,7 @@ If an authorization access page is displayed press the button labelled 'Allow se
 
 image::codeready-workspaces-01.png[CodeReady Workspaces account information]
 
-Enter your userXX identifier for the user name, where XX is your user number and enter an email address, first and last names and hit submit.
+Enter {{USER_ID}} for the user name, enter an email address, first and last names and hit submit.
 
 At this point in time you have access to CodeReady Workspaces but you do not yet have a workspace.
 
@@ -72,7 +72,7 @@ image::codeready-workspaces-02.png[CodeReady Workspaces getting started]
 
 This screen allows you to create a new workspace by selecting a technology stack. This will result in a specific container image being selected for use to create your workspace. Feel free to experiment with the different stacks later but for now select the option 'Workspaces' on the left hand side menu and then select the blue 'Add Workspace' button. 
 
-In the new workspace screen enter the workspace name in the format userXX-workspace1 where XX is your user ID number.
+In the new workspace screen enter the workspace name in the format {{USER_ID}}-workspace1.
 
 In the section entitled 'Select Stack' choose the Stack called 'NodeJS Express Web Application'. You should see node-js-web-app appear at the bottom of the screen in the list of projects. 
 
@@ -156,7 +156,7 @@ Select the OpenShift icon (last but one) and you will see the screen as shown ab
 
 The workspace is currently logged in to the cluster as a service account so you need to login as your correct user ID. Click on the arrow pointing to the right on the top of the OpenShift panel shown above. When you float the mouse over it the pop up should display 'Log in to cluster'. If you are prompted that you are already logged in click yes to login under your correct ID. Select credentials as the login mechanism, then select 'https://<address>:443 Current Context', then select 'Add new user', then enter your user name and password when prompted. If you are offered an option to save your username and password select 'yes'.
 
-Right-click on the address of the cluster and select 'New Project'. Enter crw-project-XX where XX is your user number for the project name.
+Right-click on the address of the cluster and select 'New Project'. Enter crw-project-{{USER_ID}} for the project name.
 
 Right-click on the new project name and select 'New Component'. At this point the only component that can be created is a new application so select that option and enter crw-app-1 as the application name to start the multi-stage wizard that will guide you through creating the application. 
 
@@ -174,7 +174,7 @@ For the component type select nodejs.
 
 For the Node JS version select latest.
 
-If you open up the tree structure under the crw-project-XX node you should see an application similar to that which is shown below.
+If you open up the tree structure under the crw-project-{{USER_ID}} node you should see an application similar to that which is shown below.
 
 image::codeready-workspaces-10.png[Application created by CodeReady Workspaces]
 

@@ -19,21 +19,21 @@ OpenShift Serverless uses the Operator Lifecycle manager, this means that its op
 
 === Creating the project
 
-Log on to cluster as userX, password openshift (where X is your assigned user number)
+Log on to cluster as {{USER_ID}}, password openshift
 
 Ensure you are on the Administrator View (top level, select Administrator)
 
 Click on 'Create Project'
 
-Name - ‘serverlessX’ where X is your assigned user number
+Name - ‘serverless_{{USER_ID}}’
 
 Display Name and Description - doesn't matter
 
-In the terminal window, switch to the new project with this command (replacing X with your assigned user number)
+In the terminal window, switch to the new project with this command
 
 [source]
 ----
-oc project serverlessX
+oc project serverless_{{USER_ID}}
 ----
 
 === Deploying a serverless application using the Knative CLI
@@ -171,9 +171,9 @@ In this lab, we have deployed a serverless applications on OpenShift, rolled out
 
 === Cleaning up
 
-To clean up the resources from this lab, delete the project with this command, replacing X with your assigned user number:
+To clean up the resources from this lab, delete the project with this command:
 
 [source]
 ----
-oc delete project serverlessX
+oc delete project serverless_{{USER_ID}}
 ----

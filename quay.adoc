@@ -49,14 +49,12 @@ In order to interact with Quay each user requires an OpenShift project containin
 
 [source]
 ----
-oc new-project quay-workshop-userXX
+oc new-project quay-workshop-{{USER_ID}}
 
 oc new-app --name node-app-rest https://github.com/marrober/simpleRest.git
 
 oc expose service node-app-rest --name="node-app-rest"
 ----
-
-_where XX is your user number_
 
 The above commands will create an image stream for the simpleRest application which can be viewed using the command below.
 
@@ -73,7 +71,7 @@ This will display image streams similar to that which is shown in the table belo
 |===
 
 |NAME|              IMAGE REPOSITORY|                                                              TAGS|     UPDATED
-|node-app-rest|   default-route-openshift-<reduced>.com/quay-workshop-userX/node-app-rest|      latest|   22 hours ago
+|node-app-rest|   default-route-openshift-<reduced>.com/quay-workshop-{{USER_ID}}/node-app-rest|      latest|   22 hours ago
 |===
 
 The image repository field will show the route to use to get access to the container images within the container image repository. Now that you have some images to manage it is necessary to create the repositories in Quay.
@@ -100,7 +98,7 @@ image::quay-4.png[Quay organization permissions]
 
 On the right hand side of the quay.io web user interface shown above you will see an option to 'Create new Organization'. Click this to create an organization which will allow you to manage security and create a logical grouping of repositories.
 
-Give the organization a name of 'workshopuserXX', where XX is your workshop user number. Provide an email address that mus be different from the email used when you created your quay.io account, select the 'Choose' button next to the 'Open Source' plan, tick the 'I'm not a robot' button and then click 'Create Organization'.
+Give the organization a name of 'workshop{{USER_ID}}'.. Provide an email address that must be different from the email used when you created your quay.io account, select the 'Choose' button next to the 'Open Source' plan, tick the 'I'm not a robot' button and then click 'Create Organization'.
 
 You will then be taken to the organization and the screen will show the repositories (currently empty), as shown below. Other options down the left hand side of the screen cover teams and members, robot accounts, default permissions, usage logs, applications and settings.
 
@@ -116,7 +114,7 @@ Press the left facing arrow on the top left of the screen to go back to the list
 
 ==== Granting permissions to repositories
 
-Select the workshopuserXX organization link to return to the image similar to that which is shown above, except that this time the organization has a repository.
+Select the workshop{{USER_ID}} organization link to return to the image similar to that which is shown above, except that this time the organization has a repository.
 
 Select the Teams and Membership tab on the left hand side of the screen (2nd icon down). Here you can create new teams and manage the users and permissions of existing teams.
 
@@ -132,7 +130,7 @@ At this point the development team has no members so click on the link stating '
 
 ==== Creating a robot account
 
-Click on the next tab down from the teams and memberships tab on the left hand side of the screen to select Robot accounts. Create a new robot account called userXX_automation (where XX is you user number). You may optionally add a description if you want to.
+Click on the next tab down from the teams and memberships tab on the left hand side of the screen to select Robot accounts. Create a new robot account called {{USER_ID}}_automation. You may optionally add a description if you want to.
 
 Grant write permission to the robot account on the node-rest-app repository and then click 'Add permissions'.
 
@@ -226,11 +224,11 @@ The token for the login command will be generates from the command :
 oc whoami -t
 ----
 
-Combined together the Buildah login command (for the example repository-URL, and where XX is replaced by your user number) becomes :
+Combined together the Buildah login command (for the example repository-URL) becomes :
 
 [source]
 ----
-buildah login --username userXX --password $(oc whoami -t) default-route-openshift-image-registry.apps.cluster-wfh1-8946.wfh1-8946.example.opentlc.com
+buildah login --username {{USER_ID}} --password $(oc whoami -t) default-route-openshift-image-registry.apps.cluster-wfh1-8946.wfh1-8946.example.opentlc.com
 ----
 
 You should get a response of "Login Succeeded!"
@@ -338,13 +336,13 @@ The new repository location is in the format :
 
 quay.io/<organization>/<repository name> for example :
 
-quay.io/workshopuserXX/node-app-rest
+quay.io/workshop{{USER_ID}}/node-app-rest
 
 Create the Builah tag command from the information collected above such that it looks similar to the below:
 
 [source]
 ----
-buildah tag default-route-openshift-image-registry.apps.cluster-wfh1-8946.wfh1-8946.example.opentlc.com/quay-workshop-user23/node-app-rest:latest quay.io/workshopuserXX/node-app-rest:1
+buildah tag default-route-openshift-image-registry.apps.cluster-wfh1-8946.wfh1-8946.example.opentlc.com/quay-workshop-{{USER_ID}}/node-app-rest:latest quay.io/workshopuser{{USER_ID}}/node-app-rest:1
 ----
 
 Note that the tag used in the command for the destination tag is 1.
@@ -369,7 +367,7 @@ for example :
 
 [source]
 ----
-buildah push quay.io/workshopuserXX/node-app-rest:1
+buildah push quay.io/workshop{{USER_ID}}/node-app-rest:1
 
 ----
 
@@ -389,13 +387,11 @@ Use the commands below to create the OpenShift project using the content from Qu
 
 [source]
 ----
-oc new-project quay-workshop-userXX-qa
+oc new-project quay-workshop-{{USER_ID}}-qa
 
-oc new-app --docker-image=quay.io/workshopuserXX/node-app-rest:1 --name=node-app-rest
+oc new-app --docker-image=quay.io/workshop{{USER_ID}}/node-app-rest:1 --name=node-app-rest
 oc expose service node-app-rest --name="rest-app-route"
 ----
-
-_where XX is your user ID_
 
 To test the application get the route with the command:
 
@@ -424,11 +420,9 @@ Finally, lets clean up the project by typing
 
 [source]
 ----
-oc delete project quay-workshop-userXX
-oc delete project quay-workshop-userXX-qa
+oc delete project quay-workshop-{{USER_ID}}
+oc delete project quay-workshop-{{USER_ID}}-qa
 ----
-
-_where XX is your user ID_
 
 This will delete the projects
 
