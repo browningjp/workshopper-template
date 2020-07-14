@@ -1,5 +1,5 @@
-id: "devex"
-name: "OpenShift Developer Experience"
+id: "devtools"
+name: "Developer Tools"
 
 content:
   url: https://raw.githubusercontent.com/browningjp/workshopper-template/master
