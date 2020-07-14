@@ -9,6 +9,8 @@ vars:
 
 modules:
   activate:
-  - intro
-  - prereq
   - introductiontooc
+  - odo
+  - tekton
+  - quay
+  - codereadyworkspaces
