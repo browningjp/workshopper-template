@@ -1,6 +1,3 @@
-
-== The RBAC model for Developers [ESSENTIALS]
-
 === Introduction
 
 *This chapter will introduce the attendee to the concepts around the Role Based Access Control model integrated into OpenShift. This will cover the use of Users, Service Accounts and Permissions.*

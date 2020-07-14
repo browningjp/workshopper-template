@@ -1,5 +1,3 @@
-== Workshop Pre-requisites
-
 === Setting up the UI and Terminal
 
 *The workshop was designed and tested on the Chrome browser and it is advised to avoid issues that this browser be used whenever possible*

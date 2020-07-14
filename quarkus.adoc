@@ -1,6 +1,3 @@
-:hide-uri-scheme:
-== Introduction to Quarkus on OpenShift [INNOVATION]
-
 Author: Ally Kouao (feedback to akouao@redhat.com)
 
 === Introduction

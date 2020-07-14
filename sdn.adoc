@@ -1,6 +1,3 @@
-
-== Understanding the Software Defined Network [ESSENTIALS]
-
 === Introduction
 
 This chapter provides a developer-centric view of the fundamentals and capabilities of the SDN (Software Defined Network) that is used within OpenShift for Application connectivity.

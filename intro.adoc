@@ -1,5 +1,3 @@
-== Introduction
-
 This workshop is designed to introduce Developers to *OpenShift 4* and explain the usage and technologies around it from a developer perspective.
 
 === What is Openshift

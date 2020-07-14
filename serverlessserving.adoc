@@ -1,5 +1,3 @@
-== OpenShift Serverless Serving [INNOVATION]
-
 Author: Jonny Browning (feedback to browning@redhat.com)
 
 === Introduction

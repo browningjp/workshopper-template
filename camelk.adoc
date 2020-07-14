@@ -1,5 +1,3 @@
-== Camel K on Openshift [INNOVATION]
-
 Author: Phil Prosser (feedback to pprosser@redhat.com)
 
 === Introduction

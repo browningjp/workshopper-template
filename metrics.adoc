@@ -1,5 +1,3 @@
-== Introduction to Metrics and Logging in OpenShift [INTRODUCTION]
-
 Author: Ian Lawson (feedback to ian.lawson@redhat.com)
 
 === Introduction

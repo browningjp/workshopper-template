@@ -1,7 +1,3 @@
-[[healthprobes]]
-
-== Pod Health Probes [ESSENTIALS]
-
 Author: Mark Roberts (feedback to mroberts@redhat.com)
 
 === Introduction

@@ -1,5 +1,3 @@
-== Introduction to 'oc' [INTRODUCTION]
-
 Author: Ian Lawson (feedback to ian.lawson@redhat.com)
 
 === Introduction
